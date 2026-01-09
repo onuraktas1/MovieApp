@@ -9,6 +9,7 @@ namespace MovieApi.WebApi.Controllers;
 [ApiController]
 public class CategoriesController : ControllerBase
 {
+    
     private readonly GetCategoryQueryHandler _getCategoryQueryHandler;
     private readonly GetCategoryByIdQueryHandler _getCategoryByIdQueryHandler;
     private readonly CreateCategoryCommandHandler _createCategoryCommandHandler;
