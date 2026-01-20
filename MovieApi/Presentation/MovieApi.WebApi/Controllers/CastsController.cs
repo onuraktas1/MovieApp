@@ -17,37 +17,37 @@ public class CastsController : ControllerBase
     }
 
     [HttpGet]
-    public IActionResult CastList()
+    public async Task<IActionResult> CastList()
     {
-        var value = _mediator.Send(new GetCastQuery());
+        var value = await _mediator.Send(new GetCastQuery());
         return Ok(value);
     }
 
     [HttpGet("{id}")]
-    public IActionResult CastGetById(int id)
+    public async Task<IActionResult> CastGetById(int id)
     {
-        var value = _mediator.Send(new GetCastByIdQuery(id));
+        var value = await _mediator.Send(new GetCastByIdQuery(id));
         return Ok(value);
     }
 
     [HttpPost]
-    public IActionResult CastCreate([FromBody] CreateCastCommand command)
+    public async Task<IActionResult> CastCreate([FromBody] CreateCastCommand command)
     {
-        _mediator.Send(command);
+        await _mediator.Send(command);
         return Ok("Ekleme işlemi başarılı");
     }
 
     [HttpDelete]
-    public IActionResult CastDelete(int id)
+    public async Task<IActionResult> CastDelete(int id)
     {
-        _mediator.Send(new RemoveCastCommand(id));
+        await _mediator.Send(new RemoveCastCommand(id));
         return Ok("Silme işlemi başarılı");
     }
 
-    [HttpPut("{id}")]
-    public IActionResult CastUpdate([FromBody] UpdateCastCommand command)
+    [HttpPut]
+    public async Task<IActionResult> CastUpdate([FromBody] UpdateCastCommand command)
     {
-        _mediator.Send(command);
+        await _mediator.Send(command);
         return Ok("Güncelleme başarılı");
     }
 }

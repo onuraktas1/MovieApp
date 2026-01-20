@@ -1,4 +1,5 @@
 using MediatR;
+using Microsoft.EntityFrameworkCore;
 using MovieApi.Application.Features.MediatorDesignPattern.Queries.TagQueries;
 using MovieApi.Application.Features.MediatorDesignPattern.Results.TagResults;
 using MovieApi.Persistence.Context;
@@ -16,7 +17,7 @@ public class GetTagQueryHandler : IRequestHandler<GetTagQuery, List<GetTagQueryR
 
     public async Task<List<GetTagQueryResult>> Handle(GetTagQuery request, CancellationToken cancellationToken)
     {
-        var values = _context.Tags.ToList();
+        var values = await _context.Tags.ToListAsync();
 
         return values.Select(x => new GetTagQueryResult
         {
