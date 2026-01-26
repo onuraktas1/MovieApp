@@ -18,7 +18,7 @@ public class MovieController : Controller
         ViewBag.v1 = "Film Listesi";
         ViewBag.v2 = "Ana Sayfa";
         ViewBag.v3 = "Tüm Filmler";
-
+        
         var client = _clientFactory.CreateClient();
         var responseMessage = await client.GetAsync("https://localhost:7225/api/Movies");
         if (responseMessage.IsSuccessStatusCode)
@@ -31,5 +31,10 @@ public class MovieController : Controller
 
         return View();
     }
-}
 
+    public async Task<IActionResult> MovieDetail(int id)
+    {
+        id = 0;
+        return View();
+    }
+}
