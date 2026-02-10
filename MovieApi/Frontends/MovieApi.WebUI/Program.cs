@@ -22,17 +22,14 @@ app.UseAuthorization();
 app.MapStaticAssets();
 
 app.MapControllerRoute(
-        name: "default",
-        pattern: "{controller=Movie}/{action=MovieList}/{id?}")
+        name: "areas",
+        pattern: "{area:exists}/{controller=AdminMovie}/{action=MovieList}/{id?}")
     .WithStaticAssets();
 
+app.MapControllerRoute(
+        name: "default",
+        pattern: "{controller=AdminMovie}/{action=MovieList}/{id?}")
+    .WithStaticAssets();
 
-app.UseEndpoints(endpoints =>
-{
-    endpoints.MapControllerRoute(
-        name : "areas",
-        pattern : "{area:exists}/{controller=Home}/{action=Index}/{id?}"
-    );
-});
 
 app.Run();

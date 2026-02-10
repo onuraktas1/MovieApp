@@ -1,0 +1,87 @@
+﻿@model AdminCreateCategoryDto
+
+@{
+    ViewBag.Title = "title";
+    Layout = "~/Views/AdminLayout/Index.cshtml";
+}
+<link rel="stylesheet" href="/css/AdminMovieList.css">
+
+<style>
+    /* Input icon */
+    .input-icon {
+        position: relative;
+    }
+
+    .input-icon ion-icon {
+        position: absolute;
+        top: 50%;
+        left: 14px;
+        transform: translateY(-50%);
+        color: #6c757d;
+        font-size: 18px;
+    }
+
+    .input-icon input {
+        padding-left: 42px;
+        border-radius: 10px;
+    }
+
+    /* Dark theme */
+    .dark-theme .input-icon input {
+        background: #262837;
+        border: 1px solid #2f3142;
+        color: #e4e6eb;
+    }
+
+    .dark-theme .input-icon ion-icon {
+        color: #9da3b0;
+    }
+
+</style>
+
+<div class="card admin-card">
+    <div class="card-body">
+
+        <!-- Header -->
+        <div class="mb-4">
+            <h5 class="mb-1 fw-semibold">Yeni Kategori</h5>
+            <small class="text-muted">Film kategorisi ekleyin</small>
+        </div>
+
+        <!-- Form -->
+        <form method="post">
+
+            <div class="mb-4">
+                <label class="form-label fw-medium">Kategori Adı</label>
+
+                <div class="input-icon">
+                    <ion-icon name="pricetag-outline"></ion-icon>
+                    <input type="text"
+                           name="Name"
+                           class="form-control"
+                           placeholder="Örn: Bilim Kurgu"
+                           required />
+                </div>
+
+                <small class="text-muted">
+                    Kategori adı kullanıcıya bu şekilde gösterilecektir.
+                </small>
+            </div>
+
+            <!-- Actions -->
+            <div class="d-flex justify-content-end gap-2">
+                <a href="/Admin/AdminCategory/CategoryList" class="btn btn-light">
+                    Vazgeç
+                </a>
+
+                <button type="submit" class="btn btn-primary btn-soft">
+                    <ion-icon name="save-outline"></ion-icon>
+                    Kaydet
+                </button>
+            </div>
+
+        </form>
+
+    </div>
+</div>
+

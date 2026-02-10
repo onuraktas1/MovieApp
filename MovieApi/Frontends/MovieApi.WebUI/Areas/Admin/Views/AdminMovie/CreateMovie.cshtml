@@ -1,0 +1,161 @@
+﻿@model AdminCreateMovieDto
+
+@{
+    ViewBag.Title = "title";
+    Layout = "~/Views/AdminLayout/Index.cshtml";
+}
+<style>
+    textarea.form-control {
+        border-radius: 10px;
+    }
+
+    /* Dark theme textarea */
+    .dark-theme textarea.form-control {
+        background: #262837;
+        border: 1px solid #2f3142;
+        color: #e4e6eb;
+    }
+
+    /* Switch dark fix */
+    .dark-theme .form-check-input {
+        background-color: #2f3142;
+        border-color: #2f3142;
+    }
+
+</style>
+
+
+<div class="card admin-card">
+    <div class="card-body">
+
+        <!-- Header -->
+        <div class="mb-4">
+            <h5 class="mb-1 fw-semibold">Yeni Film Ekle</h5>
+            <small class="text-muted">Film bilgilerini eksiksiz doldurun</small>
+        </div>
+
+        <form method="post" action="CreateMovie" >
+
+            <!-- Film Bilgileri -->
+            <div class="row g-4">
+
+                <!-- Film Adı -->
+                <div class="col-md-6">
+                    <label class="form-label fw-medium">Film Adı</label>
+                    <div class="input-icon">
+                        <ion-icon name="film-outline"></ion-icon>
+                        <input type="text"
+                               name="Title"
+                               class="form-control"
+                               placeholder="Örn: Interstellar"
+                               required />
+                    </div>
+                </div>
+
+                <!-- Kapak Görseli -->
+                <div class="col-md-6">
+                    <label class="form-label fw-medium">Kapak Görsel URL</label>
+                    <div class="input-icon">
+                        <ion-icon name="image-outline"></ion-icon>
+                        <input type="url"
+                               name="CoverImageUrl"
+                               class="form-control"
+                               placeholder="https://..."
+                               required />
+                    </div>
+                </div>
+
+                <!-- Rating -->
+                <div class="col-md-4">
+                    <label class="form-label fw-medium">Rating (0–10)</label>
+                    <div class="input-icon">
+                        <ion-icon name="star-outline"></ion-icon>
+                        <input type="number"
+                               name="Rating"
+                               step="0.5"
+                               min="0"
+                               max="10"
+                               class="form-control"
+                               placeholder="Örn: 8.5"
+                               required />
+                    </div>
+                </div>
+
+                <!-- Süre -->
+                <div class="col-md-4">
+                    <label class="form-label fw-medium">Süre (dk)</label>
+                    <div class="input-icon">
+                        <ion-icon name="time-outline"></ion-icon>
+                        <input type="number"
+                               name="Duration"
+                               class="form-control"
+                               placeholder="Örn: 169"
+                               required />
+                    </div>
+                </div>
+
+                <!-- Çıkış Tarihi -->
+                <div class="col-md-4">
+                    <label class="form-label fw-medium">Çıkış Tarihi</label>
+                    <div class="input-icon">
+                        <ion-icon name="calendar-outline"></ion-icon>
+                        <input type="date"
+                               name="ReleaseDate"
+                               class="form-control"
+                               required />
+                    </div>
+                </div>
+
+                <!-- Açıklama -->
+                <div class="col-12">
+                    <label class="form-label fw-medium">Açıklama</label>
+                    <textarea name="Description"
+                              rows="4"
+                              class="form-control"
+                              placeholder="Film hakkında kısa açıklama..."
+                              required></textarea>
+                </div>
+
+                <!-- Yıl -->
+                <div class="col-md-6">
+                    <label class="form-label fw-medium">Yayın Yılı</label>
+                    <div class="input-icon">
+                        <ion-icon name="calendar-clear-outline"></ion-icon>
+                        <input type="text"
+                               name="CreatedYear"
+                               class="form-control"
+                               placeholder="Örn: 2024"
+                               required />
+                    </div>
+                </div>
+
+                <!-- Durum -->
+                <div class="col-md-6">
+                    <label class="form-label fw-medium d-block">Durum</label>
+                    <div class="form-check form-switch mt-2">
+                        <input class="form-check-input"
+                               type="checkbox"
+                               name="Status"
+                               checked />
+                        <label class="form-check-label">Aktif</label>
+                    </div>
+                </div>
+
+            </div>
+
+            <!-- Actions -->
+            <div class="d-flex justify-content-end gap-2 mt-5">
+                <a href="/Admin/AdminMovie/MovieList" class="btn btn-light">
+                    Vazgeç
+                </a>
+
+                <button type="submit" class="btn btn-primary btn-soft">
+                    <ion-icon name="save-outline"></ion-icon>
+                    Kaydet
+                </button>
+            </div>
+
+        </form>
+
+    </div>
+</div>

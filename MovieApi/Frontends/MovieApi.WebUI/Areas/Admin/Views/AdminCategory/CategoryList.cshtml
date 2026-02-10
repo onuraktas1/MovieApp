@@ -1,0 +1,150 @@
+﻿@model List<AdminResultCategoryDto>
+
+@{
+    ViewBag.Title = "title";
+    Layout = "~/Views/AdminLayout/Index.cshtml";
+}
+<link rel="stylesheet" href="/css/AdminMovieList.css">
+<style>
+    .count-badge {
+        display: inline-flex;
+        align-items: center;
+        gap: 6px;
+        padding: 4px 10px;
+        border-radius: 20px;
+        background: rgba(13, 110, 253, .1);
+        color: #0d6efd;
+        font-size: 13px;
+        font-weight: 500;
+    }
+
+    /* Dark theme */
+    .dark-theme .count-badge {
+        background: rgba(13, 110, 253, .2);
+        color: #9db5ff;
+    }
+
+</style>
+
+<div class="card admin-card">
+    <div class="card-body">
+
+        <!-- Header -->
+        <div class="d-flex align-items-center mb-4">
+            <div>
+                <h5 class="mb-1 fw-semibold">Kategori Listesi</h5>
+                <small class="text-muted">Film kategorileri ve istatistikler</small>
+            </div>
+
+            <div class="ms-auto d-flex align-items-center gap-2">
+                <div class="search-box">
+                    <ion-icon name="search-outline"></ion-icon>
+                    <input type="text" class="form-control" placeholder="Kategori ara...">
+                </div>
+
+                <a href="/Admin/AdminCategory/CreateCategory/" class="btn btn-primary btn-soft">
+                    <ion-icon name="add-outline"></ion-icon>
+                    Yeni Kategori
+                </a>
+            </div>
+        </div>
+
+        <!-- Table -->
+        <div class="table-responsive">
+            <table class="table admin-table align-middle">
+                <thead>
+                <tr>
+                    <th>#</th>
+                    <th>Kategori</th>
+                    <th>Filmler</th>
+                    <th>Yorumlar</th>
+                    <th>Ort. Puan</th>
+                    <th>Durum</th>
+                    <th class="text-end">İşlemler</th>
+                </tr>
+                </thead>
+
+                <tbody>
+                @foreach (var item in Model)
+                {
+                    <tr>
+                        <td class="fw-medium">@item.CategoryId</td>
+
+                        <td>
+                            <div class="fw-semibold">@item.CategoryName</div>
+                        </td>
+
+                        <td>
+                            <span class="count-badge">
+                                <ion-icon name="film-outline"></ion-icon>
+                                @item.MovieCount
+                            </span>
+                        </td>
+
+                        <td>
+                            <span class="count-badge">
+                                <ion-icon name="chatbubble-outline"></ion-icon>
+                                @* @item.CommentCount *@ 0
+                            </span>
+                        </td>
+
+                        <!-- Ortalama Puan (Yıldızlı) -->
+                        <td>
+                            <div class="star-rating">
+                                @{
+                                    // int fullStars = (int)Math.Floor(item.AverageRating);
+                                    int fullStars = 3;
+                                    // bool halfStar = item.AverageRating - fullStars >= 0.5;
+                                    bool halfStar = true;
+                                }
+
+                                @for (int i = 0; i < fullStars; i++)
+                                {
+                                    <ion-icon name="star"></ion-icon>
+                                }
+
+                                @if (halfStar)
+                                {
+                                    <ion-icon name="star-half"></ion-icon>
+                                }
+
+                                <span class="rating-text">0</span>
+                            </div>
+                        </td>
+
+                        <!-- Durum -->
+                        <td>
+                            @if (item.Status)
+                            {
+                                <span class="status active">Aktif</span>
+                            }
+                            else
+                            {
+                                <span class="status passive">Pasif</span>
+                            }
+                        </td>
+
+                        <!-- Actions -->
+                        <td class="text-end">
+                            <div class="action-buttons">
+                                <a href="#" class="btn-icon warning" title="Detay">
+                                    <ion-icon name="eye-outline"></ion-icon>
+                                </a>
+                                <a href="#" class="btn-icon success" title="Düzenle">
+                                    <ion-icon name="create-outline"></ion-icon>
+                                </a>
+                                <a href="/Admin/AdminCategory/DeleteCategory/@item.CategoryId" class="btn-icon danger"
+                                   title="Sil">
+                                    <ion-icon name="trash-outline"></ion-icon>
+                                </a>
+                            </div>
+                        </td>
+                    </tr>
+                }
+                </tbody>
+
+            </table>
+        </div>
+
+    </div>
+</div>

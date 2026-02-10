@@ -1,0 +1,210 @@
+﻿/* Card */
+.admin-card {
+    border: 0;
+    border-radius: 14px;
+    box-shadow: 0 8px 30px rgba(0, 0, 0, .05);
+}
+
+/* Search */
+.search-box {
+    position: relative;
+}
+
+.search-box ion-icon {
+    position: absolute;
+    top: 50%;
+    left: 14px;
+    transform: translateY(-50%);
+    color: #6c757d;
+}
+
+.search-box input {
+    padding-left: 40px;
+    border-radius: 10px;
+}
+
+/* Table */
+.admin-table {
+    border-collapse: separate;
+    border-spacing: 0 10px;
+}
+
+.admin-table tbody tr {
+    background: #fff;
+    border-radius: 12px;
+    transition: all .2s ease;
+}
+
+.admin-table tbody tr:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 18px rgba(0, 0, 0, .06);
+}
+
+/* Rating */
+.rating-bar {
+    height: 6px;
+    background: #e9ecef;
+    border-radius: 6px;
+    overflow: hidden;
+}
+
+.rating-fill {
+    height: 100%;
+    background: linear-gradient(90deg, #ffc107, #ff9800);
+}
+
+/* Status */
+.status {
+    padding: 4px 10px;
+    border-radius: 20px;
+    font-size: 12px;
+    font-weight: 500;
+}
+
+.status.active {
+    background: rgba(25, 135, 84, .15);
+    color: #198754;
+}
+
+.status.passive {
+    background: rgba(108, 117, 125, .15);
+    color: #6c757d;
+}
+
+/* Buttons */
+.action-buttons {
+    display: inline-flex;
+    gap: 6px;
+}
+
+.btn-icon {
+    width: 34px;
+    height: 34px;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid transparent;
+    background: #f8f9fa;
+    transition: all .2s ease;
+}
+
+.btn-icon:hover {
+    transform: translateY(-1px);
+}
+
+.btn-icon.warning {
+    color: #ffc107;
+}
+
+.btn-icon.success {
+    color: #198754;
+}
+
+.btn-icon.danger {
+    color: #dc3545;
+}
+
+/* Primary soft */
+.btn-soft {
+    background: linear-gradient(135deg, #5f5af6, #7b77ff);
+    border: none;
+}
+
+
+.star-rating {
+    display: flex;
+    align-items: center;
+    gap: 3px;
+}
+
+.star-rating ion-icon {
+    color: #ffc107;
+    font-size: 16px;
+}
+
+.rating-text {
+    margin-left: 6px;
+    font-size: 13px;
+    color: #6c757d;
+}
+
+/* =========================
+DARK THEME - ADMIN TABLE
+========================= */
+
+.dark-theme .admin-card {
+    background: #1e1e2d;
+    box-shadow: none;
+}
+
+.dark-theme .card-body {
+    color: #e4e6eb;
+}
+
+/* Table structure */
+.dark-theme .admin-table {
+    color: #e4e6eb;
+}
+
+.dark-theme .admin-table thead {
+    background: transparent;
+}
+
+.dark-theme .admin-table thead th {
+    color: #9da3b0;
+    border-bottom: 1px solid #2f3142;
+}
+
+/* Table rows */
+.dark-theme .admin-table tbody tr {
+    background: #262837;
+}
+
+.dark-theme .admin-table tbody tr:hover {
+    background: #2f3142;
+    box-shadow: none;
+}
+
+/* Text muted fix */
+.dark-theme .text-muted {
+    color: #9da3b0 !important;
+}
+
+/* Search input */
+.dark-theme .search-box input {
+    background: #262837;
+    border: 1px solid #2f3142;
+    color: #e4e6eb;
+}
+
+.dark-theme .search-box input::placeholder {
+    color: #9da3b0;
+}
+
+/* Buttons */
+.dark-theme .btn-icon {
+    background: #2f3142;
+}
+
+.dark-theme .btn-icon:hover {
+    background: #3a3d52;
+}
+
+/* Status badges */
+.dark-theme .status.active {
+    background: rgba(25, 135, 84, .25);
+}
+
+.dark-theme .status.passive {
+    background: rgba(108, 117, 125, .25);
+}
+
+.dark-theme .star-rating ion-icon {
+    color: #ffcc4d;
+}
+
+.dark-theme .rating-text {
+    color: #9da3b0;
+}
+
