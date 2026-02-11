@@ -1,4 +1,5 @@
-﻿using MovieApi.Application.Features.CQRSDesignPattern.Results.MovieResults;
+﻿using Microsoft.EntityFrameworkCore;
+using MovieApi.Application.Features.CQRSDesignPattern.Results.MovieResults;
 using MovieApi.Persistence.Context;
 
 namespace MovieApi.Application.Features.CQRSDesignPattern.Handlers.MovieHandlers;
@@ -14,7 +15,7 @@ public class GetMovieQueryHandler
 
     public async Task<List<GetMovieQueryResult>> Handle()
     {
-        var result = _context.Movies.ToList();
+        var result = await _context.Movies.ToListAsync();
 
         return result.Select(x => new GetMovieQueryResult
         {

@@ -10,6 +10,8 @@ namespace MovieApi.Domain.Entities
     {
         public int MovieId { get; set; }
         public string Title { get; set; }
+        public int CategoryId { get; set; }
+        public Category Category { get; set; }
         public string CoverImageUrl { get; set; }
         public decimal Rating { get; set; }
         public string Description { get; set; }

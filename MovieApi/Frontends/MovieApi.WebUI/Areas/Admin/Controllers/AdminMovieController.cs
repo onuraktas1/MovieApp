@@ -50,7 +50,7 @@ public class AdminMovieController : Controller
         {
             return RedirectToAction("MovieList", "AdminMovie", new { area = "Admin" });
         }
-
+        
         return View();
     }
 

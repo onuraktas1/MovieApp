@@ -1,415 +1,320 @@
-﻿INSERT INTO Movies
+﻿INSERT INTO Movies 
 (Title, CoverImageUrl, Rating, Description, Duration, ReleaseDate, CreatedYear, Status, CategoryId)
 VALUES
-('Esaretin Bedeli', '/images/esaretin-bedeli.jpg', 9.3,
-'Haksız yere müebbet hapse mahkûm edilen Andy Dufresne, Shawshank Hapishanesi’nde umudunu ve insanlığını kaybetmeden hayata tutunur. Film, özgürlük, dostluk ve sabrın gücünü etkileyici bir dille anlatır.',
-142, '1994-09-23', 1994, 'Active', 2),
+-- 1 Bilim Kurgu
+('Yıldızlararası',
+'https://example.com/interstellar.jpg',
+8.6,
+'Dünya yaşanmaz hale gelirken bir grup astronot insanlık için yeni bir gezegen arayışıyla solucan deliğinden geçerek bilinmeyene doğru yolculuğa çıkar. Film, bilim, zaman kavramı ve baba-kız ilişkisini duygusal bir derinlikle işler.',
+169,
+'2014-11-07',
+2026,
+1,
+1),
 
-('Baba', '/images/baba.jpg', 9.2,
-'Corleone ailesinin başındaki Don Vito Corleone, suç dünyasındaki gücünü korumaya çalışırken ailesi içindeki dengeler değişir. Mafya dünyası, aile bağları ve sadakat kavramları üzerinden derinlemesine işlenir.',
-175, '1972-03-24', 1972, 'Active', 2),
+-- 2 Psikoloji
+('Siyah Kuğu',
+'https://example.com/siyahkugu.jpg',
+8.0,
+'Genç bir balerin olan Nina, Kuğu Gölü balesinde başrolü alır ancak mükemmeliyet takıntısı ve psikolojik baskılar nedeniyle gerçeklik algısını kaybetmeye başlar. Film, insan zihninin kırılganlığını etkileyici bir şekilde yansıtır.',
+108,
+'2010-12-03',
+2026,
+1,
+2),
 
-('Başlangıç', '/images/baslangic.jpg', 8.8,
-'Rüyalar aracılığıyla bilinçaltına girerek sırlar çalan Dom Cobb, bu kez zihne bir fikir yerleştirme görevini üstlenir. Gerçek ile rüya arasındaki sınırlar giderek belirsizleşir.',
-148, '2010-07-16', 2010, 'Active', 15),
+-- 4 Dram
+('Babam ve Oğlum',
+'https://example.com/babamveoglum.jpg',
+8.3,
+'12 Eylül darbesi sonrası ailesiyle sorunlar yaşayan bir gazetecinin, küçük oğluyla birlikte baba ocağına dönüşünü anlatır. Film, aile bağları, geçmişle yüzleşme ve affetme temalarını duygusal bir anlatımla işler.',
+112,
+'2005-11-18',
+2026,
+1,
+4),
 
-('Yıldızlararası', '/images/yildizlararasi.jpg', 8.7,
-'Dünya yaşanmaz hale gelirken bir grup astronot, insanlık için yeni bir yuva bulmak üzere uzayın derinliklerine gönderilir. Film, zaman, fedakârlık ve aile bağlarını merkezine alır.',
-169, '2014-11-07', 2014, 'Active', 15),
+-- 5 Korku
+('Büyü',
+'https://example.com/buyu.jpg',
+6.2,
+'Bir grup araştırmacı Anadolu’da lanetli olduğu söylenen bir köyde paranormal olayları incelemeye gider. Ancak kazdıkları sırlar karanlık ve ölümcül sonuçlar doğurur.',
+132,
+'2004-04-16',
+2026,
+1,
+5),
 
-('Forrest Gump', '/images/forrest-gump.jpg', 8.8,
-'Düşük IQ’suna rağmen saf kalbi ve iyimserliğiyle Amerikan tarihinin önemli anlarına tanıklık eden Forrest, hayatın beklenmedik sürprizlerle dolu olduğunu gösterir.',
-142, '1994-07-06', 1994, 'Active', 2),
+-- 1002 Komedi
+('Recep İvedik',
+'https://example.com/recepivedik.jpg',
+4.7,
+'Kaba ama dobra bir karakter olan Recep İvedik, kaybettiği cüzdanı sahibine ulaştırmak için Antalya’ya gider. Tatil köyünde yaşanan absürt ve komik olaylar zinciri filmi eğlenceli hale getirir.',
+107,
+'2008-02-22',
+2026,
+1,
+1002),
 
-('Kara Şövalye', '/images/kara-sovalye.jpg', 9.0,
-'Batman, Gotham şehrini kaosa sürükleyen Joker ile karşı karşıya gelir. Film, suç, adalet ve ahlaki ikilemleri derin bir şekilde ele alır.',
-152, '2008-07-18', 2008, 'Active', 18),
+-- 1003 Serüven
+('Indiana Jones: Kutsal Hazine Avcıları',
+'https://example.com/indianajones.jpg',
+8.4,
+'Arkeolog Indiana Jones, kutsal sandığı bulmak için Nazilerle yarışır. Aksiyon ve macera dolu sahneleriyle sinema tarihinin en ikonik serüven filmlerinden biridir.',
+115,
+'1981-06-12',
+2026,
+1,
+1003),
 
-('Dövüş Kulübü', '/images/dovus-kulubu.jpg', 8.8,
-'Hayatından memnun olmayan bir adam, Tyler Durden ile tanıştıktan sonra yeraltı dövüş kulüplerinin karanlık ve anarşik dünyasına sürüklenir.',
-139, '1999-10-15', 1999, 'Active', 13),
+-- 1004 Animasyon
+('Aslan Kral',
+'https://example.com/aslankral.jpg',
+8.5,
+'Genç aslan Simba, babasının ölümünden sonra sürgüne gider ancak büyüdüğünde tahtını geri almak için geçmişiyle yüzleşir. Film dostluk, cesaret ve sorumluluk temalarını işler.',
+88,
+'1994-06-15',
+2026,
+1,
+1004),
 
-('Matrix', '/images/matrix.jpg', 8.7,
-'Neo, yaşadığı dünyanın aslında bir simülasyon olduğunu keşfeder. İnsanlık ile makineler arasındaki savaşı konu alan film, sinema tarihinde çığır açmıştır.',
-136, '1999-03-31', 1999, 'Active', 15),
+-- 1005 Macera
+('Karayip Korsanları: Siyah İnci''nin Laneti',
+'https://example.com/karayipkorsanlari.jpg',
+8.1,
+'Demirci Will Turner ve eksantrik korsan Jack Sparrow, kaçırılan Elizabeth’i kurtarmak için lanetli Siyah İnci gemisinin peşine düşer. Film deniz macerasını fantastik öğelerle birleştirir.',
+143,
+'2003-07-09',
+2026,
+1,
+1005),
 
-('Gladyatör', '/images/gladyator.jpg', 8.5,
-'Roma İmparatorluğu’nda ihanete uğrayan General Maximus, köle olarak arenaya sürülür ve intikam yolculuğuna çıkar.',
-155, '2000-05-05', 2000, 'Active', 20),
+-- 1006 Belgesel
+('Home',
+'https://example.com/homebelgesel.jpg',
+8.5,
+'Dünya’nın doğal güzelliklerini ve insanlığın çevre üzerindeki etkisini gözler önüne seren etkileyici bir belgesel. Küresel ısınma ve çevre bilinci konusunda güçlü mesajlar verir.',
+118,
+'2009-06-05',
+2026,
+1,
+1006),
 
-('Titanik', '/images/titanik.jpg', 7.9,
-'1912 yılında batan Titanic gemisinde geçen bu epik aşk hikayesi, büyük bir felaketin gölgesinde yaşanan duygusal bir dramı anlatır.',
-195, '1997-12-19', 1997, 'Active', 19),
-
-('Kuzuların Sessizliği', '/images/kuzularin-sessizligi.jpg', 8.6,
-'Genç bir FBI ajanı, seri katili yakalayabilmek için zeki ama son derece tehlikeli olan Dr. Hannibal Lecter’dan yardım alır.',
-118, '1991-02-14', 1991, 'Active', 13),
-
-('Er Ryan’ı Kurtarmak', '/images/er-ryani-kurtarmak.jpg', 8.6,
-'Normandiya Çıkarması sırasında, bir askeri kurtarmakla görevlendirilen birliğin yaşadığı zorluklar son derece gerçekçi bir şekilde anlatılır.',
-169, '1998-07-24', 1998, 'Active', 20),
-
-('Joker', '/images/joker.jpg', 8.4,
-'Toplumdan dışlanan Arthur Fleck, yaşadığı trajediler sonucu Gotham’ın simgesi haline gelen bir suç figürüne dönüşür.',
-122, '2019-10-04', 2019, 'Active', 13),
-
-('Prestij', '/images/prestij.jpg', 8.5,
-'İki rakip sihirbaz arasındaki rekabet, takıntı ve fedakârlıkla tehlikeli bir boyuta ulaşır.',
-130, '2006-10-20', 2006, 'Active', 13),
-
-('Parazit', '/images/parazit.jpg', 8.5,
-'Yoksul bir ailenin zengin bir ailenin hayatına sızmasıyla başlayan olaylar, sınıf ayrımını çarpıcı biçimde gözler önüne serer.',
-132, '2019-05-30', 2019, 'Active', 2),
-
-('Whiplash', '/images/whiplash.jpg', 8.5,
-'Hırslı bir genç davulcu ile acımasız bir müzik öğretmeni arasındaki ilişki, başarı uğruna yapılan fedakârlıkları anlatır.',
-107, '2014-10-10', 2014, 'Active', 2),
-
-('La La Land: Aşıklar Şehri', '/images/la-la-land.jpg', 8.0,
-'Los Angeles’ta hayallerinin peşinden koşan iki gencin aşk ve kariyer arasında yaptığı seçimleri anlatan modern bir müzikal.',
-128, '2016-12-09', 2016, 'Active', 16),
-
-('Ruhların Kaçışı', '/images/ruhlarin-kacisi.jpg', 8.6,
-'Gizemli bir dünyada mahsur kalan küçük bir kızın cesaret ve büyüme hikayesini anlatan unutulmaz bir animasyon filmi.',
-125, '2001-07-20', 2001, 'Active', 5),
-
-('Yenilmezler: Son Oyun', '/images/yenilmezler-son-oyun.jpg', 8.4,
-'Thanos’un evreni yok etmesinin ardından Avengers ekibi, her şeyi geri getirmek için son bir mücadeleye girişir.',
-181, '2019-04-26', 2019, 'Active', 18),
-
-('Rocky', '/images/rocky.jpg', 8.1,
-'Şansı yaver giden amatör bir boksörün, dünya şampiyonuna karşı ringe çıkma fırsatı yakalamasıyla başlayan ilham verici hikaye.',
-120, '1976-12-03', 1976, 'Active', 21);
+-- 1011 Savaş
+('Er Ryan''ı Kurtarmak',
+'https://example.com/erryanikurtarmak.jpg',
+8.6,
+'Normandiya Çıkarması sırasında bir grup Amerikan askeri, üç kardeşini kaybetmiş olan Er Ryan’ı bulup eve götürmek için düşman hattının arkasına gönderilir. Film savaşın sert ve gerçekçi yüzünü yansıtır.',
+169,
+'1998-07-24',
+2026,
+1,
+1011);
 
 
-------------------------------------------------------------------
 
-INSERT INTO Movies
+
+
+
+
+
+
+--------------------------------------------------------------
+
+
+
+
+
+
+
+
+
+
+INSERT INTO Movies 
 (Title, CoverImageUrl, Rating, Description, Duration, ReleaseDate, CreatedYear, Status, CategoryId)
 VALUES
-('Yeşil Yol', '/images/yesil-yol.jpg', 8.6,
-'Ölüm cezası koğuşunda görev yapan gardiyanlar, doğaüstü güçlere sahip masum bir mahkûmla tanışır. Film, vicdan, adalet ve insanlık temalarını derin bir duygusallıkla işler.',
-189, '1999-12-10', 1999, 'Active', 2),
 
-('Yüzüklerin Efendisi: Yüzük Kardeşliği', '/images/yuzuk-kardesligi.jpg', 8.8,
-'Orta Dünya’da karanlığın yükselişiyle birlikte, tek yüzüğü yok etmek için farklı ırklardan oluşan bir grup zorlu bir yolculuğa çıkar.',
-178, '2001-12-21', 2001, 'Active', 11),
+-- Bilim Kurgu (1)
+('Başlangıç','https://example.com/baslangic.jpg',8.8,'Rüya içinde rüya konseptiyle bilinçaltına girerek fikir çalma operasyonu yapan bir ekibin hikayesini anlatır. Zihin bükücü kurgusu ile dikkat çeker.',148,'2010-07-16',2026,1,1),
+('Matrix','https://example.com/matrix.jpg',8.7,'Gerçekliğin aslında bir simülasyon olduğunu keşfeden Neo, insanlığı makinelerin kontrolünden kurtarmak için savaşır.',136,'1999-03-31',2026,1,1),
+('Avatar','https://example.com/avatar.jpg',7.9,'Pandora gezegeninde insanlar ve Na''vi halkı arasındaki çatışmayı epik bir görsellikle anlatır.',162,'2009-12-18',2026,1,1),
+('Marslı','https://example.com/marsli.jpg',8.0,'Mars''ta mahsur kalan bir astronotun hayatta kalma mücadelesini ve bilimin gücünü anlatır.',144,'2015-10-02',2026,1,1),
+('Yarının Sınırında','https://example.com/yarininsinirinda.jpg',7.9,'Zaman döngüsüne sıkışan bir askerin uzaylı istilasına karşı verdiği mücadeleyi anlatır.',113,'2014-06-06',2026,1,1),
 
-('Yüzüklerin Efendisi: İki Kule', '/images/iki-kule.jpg', 8.7,
-'Yüzük Kardeşliği’nin dağılmasının ardından Orta Dünya’nın farklı cephelerinde iyilik ve kötülük arasındaki savaş kızışır.',
-179, '2002-12-20', 2002, 'Active', 11),
+-- Dram (4)
+('Yeşil Yol','https://example.com/yesilyol.jpg',8.6,'İdam mahkumunun doğaüstü güçleri üzerinden adalet ve merhamet kavramlarını işler.',189,'1999-12-10',2026,1,4),
+('Forrest Gump','https://example.com/forrestgump.jpg',8.8,'Saf kalpli Forrest''ın Amerikan tarihine tanıklık eden hayat hikayesini anlatır.',142,'1994-07-06',2026,1,4),
+('Esaretin Bedeli','https://example.com/esaretinbedeli.jpg',9.3,'Haksız yere hapse giren Andy''nin umut dolu kaçış hikayesini anlatır.',142,'1994-09-23',2026,1,4),
+('Piyanist','https://example.com/piyanist.jpg',8.5,'II. Dünya Savaşı sırasında hayatta kalmaya çalışan Yahudi bir piyanistin gerçek hikayesidir.',150,'2002-09-25',2026,1,4),
+('Bir Zamanlar Anadolu''da','https://example.com/birzamanlaranadoluda.jpg',7.8,'Anadolu taşrasında bir cinayet soruşturması üzerinden insan doğasını inceler.',157,'2011-09-23',2026,1,4),
 
-('Yüzüklerin Efendisi: Kralın Dönüşü', '/images/kralin-donusu.jpg', 8.9,
-'Orta Dünya’nın kaderini belirleyecek son savaş yaklaşırken, yüzüğün yok edilmesi için verilen mücadele doruk noktasına ulaşır.',
-201, '2003-12-19', 2003, 'Active', 11),
+-- Korku (5)
+('The Conjuring','https://example.com/conjuring.jpg',7.5,'Paranormal araştırmacı çift, lanetli bir eve musallat olan varlıkla mücadele eder.',112,'2013-07-19',2026,1,5),
+('The Exorcist','https://example.com/exorcist.jpg',8.1,'Küçük bir kızın şeytani varlık tarafından ele geçirilmesini konu alır.',122,'1973-12-26',2026,1,5),
+('A Quiet Place','https://example.com/aquietplace.jpg',7.5,'En ufak seste saldıran yaratıklardan kaçan bir ailenin sessizlik içindeki mücadelesini anlatır.',90,'2018-04-06',2026,1,5),
+('It','https://example.com/it.jpg',7.3,'Küçük bir kasabada çocukları hedef alan palyaço Pennywise korku saçar.',135,'2017-09-08',2026,1,5),
+('Hereditary','https://example.com/hereditary.jpg',7.3,'Aile içi travmalar ve karanlık sırlar psikolojik korku unsurlarıyla işlenir.',127,'2018-06-08',2026,1,5),
 
-('Piyanist', '/images/piyanist.jpg', 8.5,
-'II. Dünya Savaşı sırasında Varşova’da hayatta kalmaya çalışan Yahudi bir piyanistin gerçek yaşam öyküsünden uyarlanan etkileyici bir dram.',
-150, '2002-09-25', 2002, 'Active', 2),
+-- Komedi (1002)
+('The Mask','https://example.com/mask.jpg',6.9,'Sihirli bir maske bulan sıradan bir adamın çılgın dönüşümünü anlatır.',101,'1994-07-29',2026,1,1002),
+('Düğün Dernek','https://example.com/dugundernek.jpg',6.8,'Oğluna düğün yapmak isteyen bir babanın başına gelen komik olaylar.',106,'2013-12-06',2026,1,1002),
+('Hababam Sınıfı','https://example.com/hababam.jpg',9.2,'Yaramaz öğrencilerin maceralarını anlatan Türk sinemasının klasiği.',85,'1975-04-01',2026,1,1002),
+('The Hangover','https://example.com/hangover.jpg',7.7,'Las Vegas''ta kontrolden çıkan bekarlığa veda partisini anlatır.',100,'2009-06-05',2026,1,1002),
+('G.O.R.A','https://example.com/gora.jpg',8.0,'Uzaya kaçırılan bir halı tüccarının absürt macerasını anlatır.',127,'2004-12-10',2026,1,1002),
 
-('Akıl Oyunları', '/images/akil-oyunlari.jpg', 8.2,
-'Dahi matematikçi John Nash’in şizofreni ile mücadelesini ve bilim dünyasındaki başarılarını anlatan ilham verici bir biyografi.',
-135, '2001-12-21', 2001, 'Active', 2),
-
-('Altıncı His', '/images/altinci-his.jpg', 8.2,
-'Ölü insanları görebilen küçük bir çocuk ile ona yardım etmeye çalışan bir psikoloğun ürpertici hikayesi.',
-107, '1999-08-06', 1999, 'Active', 13),
-
-('Sevginin Gücü', '/images/sevginin-gucu.jpg', 8.5,
-'Hayatın zorluklarına rağmen hayal gücüyle ayakta kalmaya çalışan bir babanın, oğluna sunduğu umut dolu dünya anlatılır.',
-116, '1997-12-20', 1997, 'Active', 2),
-
-('Geleceğe Dönüş', '/images/gelecege-donus.jpg', 8.5,
-'Genç bir delikanlı, yanlışlıkla geçmişe giderek ailesinin kaderini değiştirme tehlikesiyle karşı karşıya kalır.',
-116, '1985-07-03', 1985, 'Active', 15),
-
-('Terminatör 2: Mahşer Günü', '/images/terminator-2.jpg', 8.6,
-'İnsanlığı yok etmekle görevli makineler ile insan direnişi arasındaki savaşta, bir terminatör bu kez koruyucu rolündedir.',
-137, '1991-07-03', 1991, 'Active', 18),
-
-('Avatar', '/images/avatar.jpg', 7.8,
-'Pandora gezegeninde geçen film, doğa, sömürgecilik ve insanlık arasındaki çatışmayı görsel bir şölenle anlatır.',
-162, '2009-12-18', 2009, 'Active', 15),
-
-('Jurassic Park', '/images/jurassic-park.jpg', 8.1,
-'Dinozorların genetik olarak yeniden hayata döndürüldüğü bir parkta kontrolün kaybedilmesiyle başlayan hayatta kalma mücadelesi.',
-127, '1993-06-11', 1993, 'Active', 11),
-
-('Leon: Sevginin Gücü', '/images/leon.jpg', 8.5,
-'Soğukkanlı bir tetikçi ile ailesini kaybeden küçük bir kız arasında kurulan sıra dışı bağ anlatılır.',
-110, '1994-09-14', 1994, 'Active', 13),
-
-('Cehennem Melekleri', '/images/cehennem-melekleri.jpg', 6.5,
-'Özel yeteneklere sahip paralı askerlerden oluşan bir ekip, yüksek riskli bir görev için görevlendirilir.',
-103, '2010-08-13', 2010, 'Active', 18),
-
-('Mad Max: Öfkeli Yollar', '/images/mad-max-ofkeli-yollar.jpg', 8.1,
-'Kıyamet sonrası bir dünyada hayatta kalmaya çalışan insanların amansız kaçış hikayesi.',
-120, '2015-05-15', 2015, 'Active', 18),
-
-('Her Şey Çok Güzel Olacak', '/images/her-sey-cok-guzel-olacak.jpg', 8.1,
-'İtalya’da geçen bu film, bir babanın oğlunu korumak için kurduğu hayal dünyası üzerinden savaşın acı yüzünü anlatır.',
-116, '1997-12-20', 1997, 'Active', 2),
-
-('Ben Efsaneyim', '/images/ben-efsaneyim.jpg', 7.2,
-'Bir virüs salgını sonrası yalnız kalan bir adamın, hayatta kalma ve insanlığı kurtarma çabası anlatılır.',
-101, '2007-12-14', 2007, 'Active', 15),
-
-('A Beautiful Mind', '/images/a-beautiful-mind.jpg', 8.2,
-'Dahi bir bilim insanının iç dünyası, aşkı ve hastalığıyla verdiği mücadele konu alınır.',
-135, '2001-12-21', 2001, 'Active', 2),
-
-('Logan', '/images/logan.jpg', 8.1,
-'Yaşlanan Wolverine, geçmişiyle yüzleşirken genç bir mutantı korumak zorunda kalır.',
-137, '2017-03-03', 2017, 'Active', 18),
-
-('Moneyball', '/images/moneyball.jpg', 7.6,
-'Bir beyzbol takımının, istatistik ve veri analizi kullanarak başarıya ulaşma hikayesini anlatan spor temalı film.',
-133, '2011-09-23', 2011, 'Active', 21);
+-- Animasyon (1004)
+('Frozen','https://example.com/frozen.jpg',7.4,'Buz güçlerine sahip Elsa ve kardeşi Anna''nın hikayesi.',102,'2013-11-27',2026,1,1004),
+('Toy Story','https://example.com/toystory.jpg',8.3,'Oyuncakların gizli dünyasını anlatan Pixar klasiği.',81,'1995-11-22',2026,1,1004),
+('Ratatuy','https://example.com/ratatuy.jpg',8.0,'Aşçı olmak isteyen bir farenin Paris macerası.',111,'2007-06-29',2026,1,1004),
+('Up','https://example.com/up.jpg',8.2,'Balonlarla evini havalandıran yaşlı bir adamın macerası.',96,'2009-05-29',2026,1,1004),
+('Ters Yüz','https://example.com/tersyuz.jpg',8.1,'Bir çocuğun zihnindeki duyguların macerasını anlatır.',95,'2015-06-19',2026,1,1004)
 
 
---------------------------------------------------------------------------
 
-INSERT INTO Movies
+
+
+
+-- -----------------------------------------------------------------------------
+
+
+
+
+
+
+
+INSERT INTO Movies 
 (Title, CoverImageUrl, Rating, Description, Duration, ReleaseDate, CreatedYear, Status, CategoryId)
 VALUES
-('Yedi', '/images/yedi.jpg', 8.6,
-'Yedi ölümcül günahı temel alan cinayetleri araştıran iki dedektif, insan doğasının karanlık yönleriyle yüzleşir.',
-127, '1995-09-22', 1995, 'Active', 13),
 
-('Olağan Şüpheliler', '/images/olagan-supheliler.jpg', 8.5,
-'Bir liman patlamasının ardından hayatta kalan bir adamın anlattıkları, gerçeğin sandığımızdan çok farklı olabileceğini gösterir.',
-106, '1995-08-16', 1995, 'Active', 13),
+-- Bilim Kurgu (1)
+('Yapay Zeka','https://example.com/yapayzeka.jpg',7.2,'İnsan olmak isteyen robot bir çocuğun duygusal ve felsefi yolculuğunu anlatır.',146,'2001-06-29',2026,1,1),
+('Azınlık Raporu','https://example.com/azinlikraporu.jpg',7.6,'Suçlar işlenmeden önce tespit edilirken sistemin hatasını keşfeden bir polisin mücadelesi.',145,'2002-06-21',2026,1,1),
+('Ben Efsaneyim','https://example.com/benefsane.jpg',7.2,'Virüs sonrası dünyada hayatta kalan son insanın yalnızlık ve umut mücadelesi.',101,'2007-12-14',2026,1,1),
+('Oblivion','https://example.com/oblivion.jpg',7.0,'Dünya sonrası gelecekte görev yapan bir teknisyenin gerçeği keşfetmesini anlatır.',124,'2013-04-19',2026,1,1),
+('Looper','https://example.com/looper.jpg',7.4,'Zamanda yolculuk yapan tetikçilerin karmaşık hikayesini konu alır.',119,'2012-09-28',2026,1,1),
 
-('Zindan Adası', '/images/zindan-adasi.jpg', 8.2,
-'Akıl hastalarının tutulduğu bir adada kaybolan hastayı araştıran bir dedektif, gerçeğin bambaşka olduğunu keşfeder.',
-138, '2010-02-19', 2010, 'Active', 13),
+-- Dram (4)
+('Ayla','https://example.com/ayla.jpg',8.3,'Kore Savaşı sırasında bir Türk askerinin küçük bir kızla kurduğu bağın gerçek hikayesi.',125,'2017-10-27',2026,1,4),
+('Can Dostum','https://example.com/candostum.jpg',8.3,'Zeki ama asi bir gencin terapistiyle kurduğu sıra dışı dostluğu anlatır.',126,'1997-12-05',2026,1,4),
+('Umudunu Kaybetme','https://example.com/umudunukaybetme.jpg',8.0,'Hayatta kalma ve başarı mücadelesi veren bir babanın gerçek hikayesidir.',117,'2006-12-15',2026,1,4),
+('Selvi Boylum Al Yazmalım','https://example.com/selviboylum.jpg',8.6,'Aşk mı emek mi sorusunu unutulmaz bir hikayeyle anlatır.',90,'1977-10-01',2026,1,4),
+('The Father','https://example.com/thefather.jpg',8.2,'Demans hastası bir adamın gerçeklik algısındaki kırılmaları etkileyici şekilde işler.',97,'2020-12-23',2026,1,4),
 
-('Amélie', '/images/amelie.jpg', 8.3,
-'Paris’te yaşayan genç bir kadının, başkalarının hayatını güzelleştirerek kendi mutluluğunu bulma hikayesi.',
-122, '2001-04-25', 2001, 'Active', 19),
+-- Korku (5)
+('The Nun','https://example.com/thenun.jpg',5.3,'Genç bir rahibenin intiharı sonrası manastırda yaşanan karanlık olayları anlatır.',96,'2018-09-07',2026,1,5),
+('Sinister','https://example.com/sinister.jpg',6.8,'Yeni evine taşınan bir yazarın bulduğu görüntü kayıtları korkunç sırları ortaya çıkarır.',110,'2012-10-12',2026,1,5),
+('Get Out','https://example.com/getout.jpg',7.7,'Sevgilisinin ailesini ziyarete giden genç adamın yaşadığı gerilim dolu olaylar.',104,'2017-02-24',2026,1,5),
+('The Ring','https://example.com/thering.jpg',7.1,'Lanetli bir video kaseti izleyenlerin yedi gün içinde ölmesini konu alır.',115,'2002-10-18',2026,1,5),
+('Paranormal Activity','https://example.com/paranormal.jpg',6.3,'Evlerinde açıklanamayan olaylar yaşayan çiftin korku dolu geceleri.',86,'2007-10-14',2026,1,5),
 
-('Sıkıysa Yakala', '/images/sikiysa-yakala.jpg', 8.1,
-'Genç bir dolandırıcı ile onu yakalamaya çalışan FBI ajanı arasındaki kedi-fare oyunu.',
-141, '2002-12-25', 2002, 'Active', 3),
+-- Komedi (1002)
+('Çok Güzel Hareketler Bunlar','https://example.com/cghb.jpg',6.5,'Bir grup gencin eğlenceli ve absürt skeçlerinden oluşan komedi filmi.',120,'2010-02-19',2026,1,1002),
+('Eyvah Eyvah','https://example.com/eyvaheyyah.jpg',7.0,'Saf ve iyi kalpli Hüseyin''in komik maceralarını anlatır.',104,'2010-02-26',2026,1,1002),
+('The Truman Show','https://example.com/trumanshow.jpg',8.2,'Hayatının bir televizyon programı olduğunu bilmeyen bir adamın hikayesi.',103,'1998-06-05',2026,1,1002),
+('Deadpool','https://example.com/deadpool.jpg',8.0,'Alaycı süper kahraman Deadpool''un aksiyon dolu ve mizahi hikayesi.',108,'2016-02-12',2026,1,1002),
+('Zoraki Kral','https://example.com/zorakikral.jpg',8.0,'Konuşma bozukluğu olan bir kralın özgüven kazanma hikayesi.',118,'2010-12-25',2026,1,1002),
 
-('Wall-E', '/images/walle.jpg', 8.4,
-'İnsanlığın dünyayı terk etmesinin ardından yalnız kalan bir robotun umut dolu hikayesi.',
-98, '2008-06-27', 2008, 'Active', 5),
+-- Macera (1005)
+('Jurassic Park','https://example.com/jurassicpark.jpg',8.1,'Genetik olarak üretilen dinozorların kontrolden çıkmasını anlatır.',127,'1993-06-11',2026,1,1005),
+('Mad Max: Fury Road','https://example.com/madmax.jpg',8.1,'Kıyamet sonrası dünyada geçen nefes kesici bir kaçış hikayesi.',120,'2015-05-15',2026,1,1005),
+('The Revenant','https://example.com/revenant.jpg',8.0,'Vahşi doğada hayatta kalma mücadelesi veren bir adamın intikam hikayesi.',156,'2015-12-25',2026,1,1005),
+('Jumanji','https://example.com/jumanji.jpg',7.0,'Sihirli bir oyun dünyasında geçen eğlenceli macera.',119,'2017-12-20',2026,1,1005),
+('King Kong','https://example.com/kingkong.jpg',7.2,'Dev goril Kong''un dramatik ve macera dolu hikayesi.',187,'2005-12-14',2026,1,1005);
 
-('Oyuncak Hikâyesi', '/images/oyuncak-hikayesi.jpg', 8.3,
-'Canlanan oyuncakların dostluk ve aidiyet temalı eğlenceli macerası.',
-81, '1995-11-22', 1995, 'Active', 5),
 
-('Yukarı Bak', '/images/yukari-bak.jpg', 8.3,
-'Yaşlı bir adam ile küçük bir izci çocuğun beklenmedik yolculuğu.',
-96, '2009-05-29', 2009, 'Active', 5),
 
-('Ters Yüz', '/images/ters-yuz.jpg', 8.2,
-'Bir çocuğun zihnindeki duyguların macerası üzerinden büyümeyi anlatan yaratıcı animasyon.',
-95, '2015-06-19', 2015, 'Active', 5),
 
-('Cesur Yürek', '/images/cesur-yurek.jpg', 8.4,
-'İskoç halkının özgürlük mücadelesini konu alan epik bir savaş filmi.',
-178, '1995-05-24', 1995, 'Active', 20),
 
-('Truman Show', '/images/truman-show.jpg', 8.2,
-'Hayatının bir televizyon programı olduğunu bilmeyen bir adamın gerçeği keşfetmesi.',
-103, '1998-06-05', 1998, 'Active', 2),
 
-('Guguk Kuşu', '/images/guguk-kusu.jpg', 8.7,
-'Bir akıl hastanesinde geçen, özgürlük ve otorite çatışmasını anlatan kült film.',
-133, '1975-11-19', 1975, 'Active', 2),
 
-('Köstebek', '/images/kostebek.jpg', 8.5,
-'Polis ve mafya arasına sızan iki köstebeğin tehlikeli mücadelesi.',
-151, '2006-10-06', 2006, 'Active', 13),
+------------------------------------------------------------------------------------
 
-('Scarface', '/images/scarface.jpg', 8.3,
-'Küba’dan Amerika’ya gelen Tony Montana’nın suç dünyasında yükselişi ve düşüşü.',
-170, '1983-12-09', 1983, 'Active', 13),
 
-('Rezervuar Köpekleri', '/images/rezervuar-kopekleri.jpg', 8.3,
-'Başarısız bir soygun sonrası suçlular arasındaki güvensizlik ve şiddet.',
-99, '1992-10-23', 1992, 'Active', 13),
 
-('Ucuz Roman', '/images/ucuz-roman.jpg', 8.9,
-'Birbirine bağlı suç hikayeleriyle sinema tarihine damga vuran kült yapım.',
-154, '1994-10-14', 1994, 'Active', 13),
 
-('Eski Günler', '/images/eski-gunler.jpg', 8.0,
-'Hayatın içinden sıcak bir dostluk ve geçmişe özlem hikayesi.',
-110, '1980-01-01', 1980, 'Active', 2),
 
-('Büyük Balık', '/images/buyuk-balik.jpg', 8.0,
-'Babasının anlattığı masalsı hikayelerin ardındaki gerçeği keşfetmeye çalışan bir adam.',
-125, '2003-12-10', 2003, 'Active', 3),
 
-('Kayıp Balık Nemo', '/images/kayip-balik-nemo.jpg', 8.2,
-'Oğlunu bulmak için okyanusları aşan bir babanın eğlenceli yolculuğu.',
-100, '2003-05-30', 2003, 'Active', 5),
-
-('Harry Potter ve Felsefe Taşı', '/images/harry-potter-1.jpg', 7.6,
-'Sihir dünyasına adım atan bir çocuğun macerasının başlangıcı.',
-152, '2001-11-16', 2001, 'Active', 11),
-
-('Harry Potter ve Ölüm Yadigârları: Bölüm 2', '/images/harry-potter-8.jpg', 8.1,
-'İyilik ve kötülük arasındaki savaşın son perdesi.',
-130, '2011-07-15', 2011, 'Active', 11),
-
-('Batman Begins', '/images/batman-begins.jpg', 8.2,
-'Batman’in doğuşunu anlatan karanlık ve gerçekçi bir başlangıç hikayesi.',
-140, '2005-06-15', 2005, 'Active', 18),
-
-('Örümcek Adam: Eve Dönüş', '/images/spiderman-homecoming.jpg', 7.4,
-'Genç Peter Parker’ın süper kahraman olma yolculuğu.',
-133, '2017-07-07', 2017, 'Active', 18),
-
-('Deadpool', '/images/deadpool.jpg', 8.0,
-'Alışılmışın dışında bir süper kahramanın kara mizah dolu hikayesi.',
-108, '2016-02-12', 2016, 'Active', 1),
-
-('Maskeli Beşler', '/images/maskeli-besler.jpg', 6.7,
-'Yanlış anlaşılmalarla dolu eğlenceli bir Türk komedisi.',
-90, '2008-01-01', 2008, 'Active', 1),
-
-('Babam ve Oğlum', '/images/babam-ve-oglum.jpg', 8.3,
-'12 Eylül sonrası Türkiye’de geçen dokunaklı bir baba-oğul hikayesi.',
-112, '2005-11-18', 2005, 'Active', 2),
-
-('Gora', '/images/gora.jpg', 8.0,
-'Ufak bir halıcının uzayda yaşadığı absürt maceralar.',
-127, '2004-11-12', 2004, 'Active', 1),
-
-('Ayla', '/images/ayla.jpg', 8.2,
-'Kore Savaşı sırasında bir Türk askerinin küçük bir kızla kurduğu bağ.',
-125, '2017-10-27', 2017, 'Active', 20),
-
-('Dağ', '/images/dag.jpg', 7.6,
-'Zorlu doğa şartlarında hayatta kalmaya çalışan iki askerin hikayesi.',
-90, '2012-11-16', 2012, 'Active', 20),
-
-('Issız Adam', '/images/issiz-adam.jpg', 6.9,
-'Modern şehir hayatında yalnızlaşan bir adamın aşk hikayesi.',
-113, '2008-11-07', 2008, 'Active', 19),
-
-('Veda', '/images/veda.jpg', 7.2,
-'Mustafa Kemal Atatürk’ün hayatına tanıklık eden bir çocukluk arkadaşının gözünden anlatılan biyografik film.',
-115, '2010-02-26', 2010, 'Active', 12);
-
-------------------------------------------------------------------
-
-INSERT INTO Movies
+INSERT INTO Movies 
 (Title, CoverImageUrl, Rating, Description, Duration, ReleaseDate, CreatedYear, Status, CategoryId)
 VALUES
-('Kara Şahin Düştü', '/images/kara-sahin-dustu.jpg', 7.7,
-'Somali’de geçen bu savaş filmi, başarısız bir askeri operasyonun ardından askerlerin hayatta kalma mücadelesini çarpıcı bir gerçekçilikle anlatır.',
-144, '2001-12-28', 2001, 'Active', 20),
 
-('Ben Hur', '/images/ben-hur.jpg', 8.1,
-'Roma döneminde geçen epik film, ihanet, intikam ve inanç temaları etrafında şekillenen görkemli bir hikaye sunar.',
-212, '1959-11-18', 1959, 'Active', 20),
+-- Bilim Kurgu (1)
+('Geleceğe Dönüş','https://example.com/gelecegedonus.jpg',8.5,'Genç Marty McFly, zamanda yolculuk yaparak ailesinin geçmişine gider ve kendi geleceğini kurtarmak zorunda kalır.',116,'1985-07-03',2026,1,1),
+('Yıldız Savaşları: Yeni Bir Umut','https://example.com/yildizsavaslari.jpg',8.6,'Luke Skywalker galaksiyi İmparatorluğun karanlık gücünden kurtarmak için direnişe katılır.',121,'1977-05-25',2026,1,1),
+('Transformers','https://example.com/transformers.jpg',7.0,'İnsan formuna dönüşebilen robotlar arasındaki savaş dünyayı tehdit eder.',144,'2007-07-03',2026,1,1),
+('Terminatör 2: Mahşer Günü','https://example.com/terminator2.jpg',8.6,'Gelecekten gelen bir robot, insanlığın kaderini değiştirecek çocuğu korumak için gönderilir.',137,'1991-07-03',2026,1,1),
+('Interstellar','https://example.com/interstellar2.jpg',8.6,'İnsanlığın yeni bir yuva bulmak için yıldızlararası yolculuğunu anlatan epik bilim kurgu.',169,'2014-11-07',2026,1,1),
 
-('Kelebek Etkisi', '/images/kelebek-etkisi.jpg', 7.6,
-'Geçmişe yapılan küçük müdahalelerin gelecekte büyük sonuçlar doğurduğu, psikolojik ve bilimkurgu öğeleri barındıran bir film.',
-113, '2004-01-23', 2004, 'Active', 15),
+-- Dram (4)
+('Kelebeğin Rüyası','https://example.com/kelebeginruyasi.jpg',7.8,'Zonguldak''ta yaşayan iki genç şairin dostluk ve aşk hikayesini anlatır.',138,'2013-02-22',2026,1,4),
+('Marriage Story','https://example.com/marriagestory.jpg',8.0,'Boşanma sürecindeki bir çiftin duygusal ve gerçekçi hikayesi.',137,'2019-11-06',2026,1,4),
+('12 Yıllık Esaret','https://example.com/12yillikesaret.jpg',8.1,'Özgür bir adamın kaçırılarak köleliğe zorlanmasının gerçek hikayesi.',134,'2013-10-18',2026,1,4),
+('Spotlight','https://example.com/spotlight.jpg',8.1,'Gazetecilerin büyük bir skandalı ortaya çıkarmasını anlatır.',129,'2015-11-06',2026,1,4),
+('Manchester by the Sea','https://example.com/manchester.jpg',7.8,'Geçmiş travmalarla yüzleşen bir adamın dramatik hikayesi.',137,'2016-11-18',2026,1,4),
 
-('Donnie Darko', '/images/donnie-darko.jpg', 8.0,
-'Zaman, kader ve gerçeklik kavramlarını sorgulayan kült film, genç bir adamın zihinsel yolculuğunu konu alır.',
-113, '2001-10-26', 2001, 'Active', 13),
+-- Korku (5)
+('Insidious','https://example.com/insidious.jpg',6.8,'Komaya giren oğullarını kurtarmaya çalışan bir ailenin paranormal mücadelesi.',103,'2010-09-14',2026,1,5),
+('The Babadook','https://example.com/babadook.jpg',6.8,'Anne ve oğlunun psikolojik korku dolu hikayesi.',94,'2014-05-22',2026,1,5),
+('The Witch','https://example.com/thewitch.jpg',6.9,'17. yüzyılda yaşayan bir ailenin karanlık güçlerle mücadelesi.',92,'2015-01-27',2026,1,5),
+('Annabelle','https://example.com/annabelle.jpg',5.4,'Lanetli bir bebeğin etrafında gelişen korkunç olaylar.',99,'2014-10-03',2026,1,5),
+('Saw','https://example.com/saw.jpg',7.6,'Kurbanlarını psikolojik oyunlara zorlayan seri katilin hikayesi.',103,'2004-10-29',2026,1,5),
 
-('The Social Network', '/images/social-network.jpg', 7.7,
-'Facebook’un kuruluş sürecini ve Mark Zuckerberg’in yükselişini anlatan modern bir biyografi-dram.',
-120, '2010-10-01', 2010, 'Active', 2),
+-- Komedi (1002)
+('Şahan Gökbakar: Osman Pazarlama','https://example.com/osmanpazarlama.jpg',4.6,'Girişimci ruhlu Osman''ın komik ticaret maceraları.',114,'2016-02-19',2026,1,1002),
+('The Grand Budapest Hotel','https://example.com/grandbudapest.jpg',8.1,'Ünlü bir otelin eksantrik müdürünün renkli hikayesi.',99,'2014-03-28',2026,1,1002),
+('Borat','https://example.com/borat.jpg',7.3,'Kazak gazetecinin Amerika''daki absürt yolculuğu.',84,'2006-11-03',2026,1,1002),
+('Maskeli Beşler','https://example.com/maskelibesler.jpg',6.2,'Bir grup sakarın komik banka soygunu hikayesi.',95,'2005-01-14',2026,1,1002),
+('Amerikan Pastası','https://example.com/amerikanpastasi.jpg',7.0,'Lise öğrencilerinin eğlenceli ve çılgın maceraları.',95,'1999-07-09',2026,1,1002),
 
-('Cennet Sineması', '/images/cennet-sinemasi.jpg', 8.5,
-'Bir kasaba sinemasında başlayan dostluk, sinema sevgisi ve geçmişe özlem duygularıyla örülü unutulmaz bir hikaye.',
-155, '1988-11-17', 1988, 'Active', 2),
+-- Macera (1005)
+('Hobbit: Beklenmedik Yolculuk','https://example.com/hobbit.jpg',7.8,'Bilbo Baggins''in ejderhaya karşı çıktığı epik yolculuk.',169,'2012-12-14',2026,1,1005),
+('Gladyatör','https://example.com/gladyator.jpg',8.5,'Roma İmparatorluğu''nda intikam arayan bir generalin hikayesi.',155,'2000-05-05',2026,1,1005),
+('Karayip Korsanları: Ölü Adamın Sandığı','https://example.com/korsan2.jpg',7.3,'Jack Sparrow''un lanetli sandıkla mücadelesi.',151,'2006-07-07',2026,1,1005),
+('Sherlock Holmes','https://example.com/sherlock.jpg',7.6,'Ünlü dedektif Sherlock Holmes''un aksiyon dolu macerası.',128,'2009-12-25',2026,1,1005),
+('Ben-Hur','https://example.com/benhur.jpg',8.1,'İhanete uğrayan bir prensin destansı intikam hikayesi.',212,'1959-11-18',2026,1,1005);
 
-('Büyük Lebowski', '/images/buyuk-lebowski.jpg', 8.1,
-'Sıradan bir adamın yanlış anlaşılmalar sonucu dahil olduğu absürt olaylar zinciri, kara mizahla anlatılır.',
-117, '1998-03-06', 1998, 'Active', 1),
 
-('Kayıp Kız', '/images/kayip-kiz.jpg', 8.1,
-'Kaybolan bir kadının ardındaki sır perdesi aralanırken evlilik, medya ve algı kavramları sorgulanır.',
-149, '2014-10-03', 2014, 'Active', 13),
 
-('Birdman', '/images/birdman.jpg', 7.7,
-'Eski bir süper kahraman oyuncusunun, Broadway sahnesinde yeniden kendini kanıtlama çabası anlatılır.',
-119, '2014-10-17', 2014, 'Active', 2),
 
-('Requiem for a Dream', '/images/requiem-for-a-dream.jpg', 8.3,
-'Bağımlılığın dört farklı hayat üzerindeki yıkıcı etkisini sarsıcı bir dille anlatan psikolojik dram.',
-102, '2000-05-14', 2000, 'Active', 2),
+----------------------------------------------------------------------
 
-('V for Vendetta', '/images/v-for-vendetta.jpg', 8.2,
-'Totaliter bir rejime karşı tek bir maskeli figürün başlattığı isyan, özgürlük ve adalet temalarıyla işlenir.',
-132, '2006-03-17', 2006, 'Active', 15),
 
-('Edge of Tomorrow', '/images/yarinin-sinirinda.jpg', 7.9,
-'Zaman döngüsü içinde tekrar tekrar aynı savaşı yaşayan bir askerin uzaylı istilasına karşı verdiği mücadele.',
-113, '2014-06-06', 2014, 'Active', 15),
 
-('Gran Torino', '/images/gran-torino.jpg', 8.1,
-'Irkçı ve huysuz bir Kore gazisinin, komşularıyla kurduğu beklenmedik bağ üzerinden değişimini anlatır.',
-116, '2008-12-12', 2008, 'Active', 2),
 
-('Soysuzlar Çetesi', '/images/soysuzlar-cetesi.jpg', 8.3,
-'II. Dünya Savaşı sırasında Nazilere karşı kurulan özel bir timin alternatif tarih hikayesi.',
-153, '2009-08-21', 2009, 'Active', 20),
 
-('No Country for Old Men', '/images/no-country-for-old-men.jpg', 8.1,
-'Bir uyuşturucu anlaşmasının ters gitmesiyle başlayan kovalamaca, kader ve şiddet temaları etrafında şekillenir.',
-122, '2007-11-21', 2007, 'Active', 13),
 
-('12 Yıllık Esaret', '/images/12-yillik-esaret.jpg', 8.1,
-'Özgür bir siyahi adamın kaçırılarak köle olarak satılmasını konu alan gerçek bir yaşam öyküsü.',
-134, '2013-11-08', 2013, 'Active', 2),
 
-('Slumdog Milyoner', '/images/slumdog-milyoner.jpg', 8.0,
-'Hindistan’da yoksulluk içinde büyüyen bir gencin, bilgi yarışmasında finale kadar yükselme hikayesi.',
-120, '2008-12-25', 2008, 'Active', 2),
 
-('Drive', '/images/drive.jpg', 7.8,
-'Geceleri kaçış şoförlüğü yapan sessiz bir adamın, suç dünyasına sürüklenmesini anlatan stilize bir gerilim.',
-100, '2011-09-16', 2011, 'Active', 13),
+INSERT INTO Movies 
+(Title, CoverImageUrl, Rating, Description, Duration, ReleaseDate, CreatedYear, Status, CategoryId)
+VALUES
 
-('Blade Runner', '/images/blade-runner.jpg', 8.1,
-'Gelecekte insan görünümlü androidlerin avlandığı distopik bir dünyada geçen kült bilimkurgu.',
-117, '1982-06-25', 1982, 'Active', 15),
+-- Bilim Kurgu (1)
+('Ex Machina','https://example.com/exmachina.jpg',7.7,'Genç bir yazılımcı, gelişmiş bir yapay zekayı test etmek için izole bir tesise davet edilir. Ancak deney ilerledikçe insanlık ve bilinç kavramları sorgulanmaya başlar.',108,'2015-04-24',2026,1,1),
 
-('Trainspotting', '/images/trainspotting.jpg', 8.1,
-'Edinburgh’da yaşayan bir grup gencin uyuşturucu bağımlılığı ve hayatla mücadelesi anlatılır.',
-94, '1996-02-23', 1996, 'Active', 2),
+-- Dram (4)
+('There Will Be Blood','https://example.com/therewillbeblood.jpg',8.2,'Petrol arayışıyla zenginleşen hırslı bir adamın güç, açgözlülük ve yalnızlık dolu hikayesini anlatır.',158,'2007-12-26',2026,1,4),
+('The Pursuit','https://example.com/thepursuit.jpg',7.5,'Hayatın zorlukları karşısında ayakta kalmaya çalışan bir adamın umut dolu mücadelesi.',115,'2006-12-15',2026,1,4),
+('Roma','https://example.com/roma.jpg',7.7,'1970''ler Meksika''sında bir ailenin hizmetçisinin hayatı üzerinden toplumsal değişim anlatılır.',135,'2018-12-14',2026,1,4),
 
-('Kibar Feyzo', '/images/kibar-feyzo.jpg', 8.3,
-'Toplumsal eleştiriyi mizahla harmanlayan, Türk sinemasının unutulmaz yapımlarından biri.',
-88, '1978-01-01', 1978, 'Active', 1),
+-- Korku (5)
+('The Others','https://example.com/theothers.jpg',7.6,'Issız bir malikanede yaşayan anne ve iki çocuğunun yaşadığı gizemli olayları konu alır.',104,'2001-08-10',2026,1,5),
+('Midsommar','https://example.com/midsommar.jpg',7.1,'İsveç''teki pagan festivaline katılan gençlerin kabusa dönüşen deneyimi.',148,'2019-07-03',2026,1,5),
+('The Descent','https://example.com/thedescent.jpg',7.2,'Mağara keşfi sırasında yer altındaki yaratıklarla karşılaşan kadın grubunun hayatta kalma mücadelesi.',99,'2005-07-08',2026,1,5),
 
-('Eşkıya', '/images/eskiya.jpg', 8.2,
-'Yıllar sonra hapisten çıkan bir adamın İstanbul’da geçen intikam ve dostluk hikayesi.',
-128, '1996-11-29', 1996, 'Active', 2),
+-- Komedi (1002)
+('Monty Python Kutsal Kase','https://example.com/montypython.jpg',8.2,'Kral Arthur ve şövalyelerinin absürt Kutsal Kase arayışını konu alan kült komedi.',91,'1975-04-03',2026,1,1002),
+('The Big Lebowski','https://example.com/biglebowski.jpg',8.1,'Yanlış kimlik yüzünden kendini karmaşık olayların içinde bulan sıradan bir adamın hikayesi.',117,'1998-03-06',2026,1,1002),
+('Ailecek Şaşkınız','https://example.com/aileceksaskiniz.jpg',6.1,'Zengin bir ailenin başına gelen beklenmedik olayları eğlenceli bir dille anlatır.',95,'2018-03-02',2026,1,1002),
 
-('Hababam Sınıfı', '/images/hababam-sinifi.jpg', 9.2,
-'Bir grup haylaz öğrencinin okul hayatı üzerinden Türk eğitim sistemine mizahi bir bakış.',
-87, '1975-04-01', 1975, 'Active', 1),
+-- Animasyon (1004)
+('Shrek','https://example.com/shrek.jpg',7.9,'Prensesi kurtarmak için yola çıkan huysuz bir devin eğlenceli macerası.',90,'2001-05-18',2026,1,1004),
+('Zootropolis','https://example.com/zootropolis.jpg',8.0,'Farklı hayvan türlerinin bir arada yaşadığı şehirde geçen polisiye macera.',108,'2016-03-04',2026,1,1004),
 
-('Vizontele', '/images/vizontele.jpg', 8.0,
-'Televizyonun bir kasabaya gelişiyle yaşanan komik ve duygusal olaylar.',
-110, '2001-02-02', 2001, 'Active', 1),
+-- Macera (1005)
+('The Mummy','https://example.com/themummy.jpg',7.0,'Antik bir laneti uyandıran maceracıların aksiyon dolu hikayesi.',124,'1999-05-07',2026,1,1005),
 
-('G.O.R.A.', '/images/gora-2004.jpg', 8.0,
-'Uzaylılar tarafından kaçırılan bir halıcının absürt ve eğlenceli macerası.',
-127, '2004-11-12', 2004, 'Active', 1),
+-- Savaş (1011)
+('1917','https://example.com/1917.jpg',8.3,'I. Dünya Savaşı sırasında iki askerin kritik bir mesajı ulaştırmak için verdiği zamana karşı yarış.',119,'2019-12-25',2026,1,1011);
 
-('Organize İşler', '/images/organize-isler.jpg', 7.4,
-'İstanbul’da geçen dolandırıcılık hikayesi, mizah ve suç öğeleriyle anlatılır.',
-106, '2005-12-23', 2005, 'Active', 1),
 
-('Recep İvedik', '/images/recep-ivedik.jpg', 4.9,
-'Gündelik hayattaki kaba ve patavatsız bir karakterin başına gelen olayları konu alan popüler komedi.',
-90, '2008-02-22', 2008, 'Active', 1),
-
-('Kış Uykusu', '/images/kis-uykusu.jpg', 8.1,
-'Kapadokya’da geçen film, insan ilişkileri, sınıf farkı ve vicdan temalarını uzun diyaloglarla derinlemesine işler.',
-196, '2014-06-13', 2014, 'Active', 2);
