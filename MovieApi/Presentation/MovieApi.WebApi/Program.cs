@@ -1,51 +1,40 @@
-using System.Reflection;
-using Microsoft.AspNetCore.Identity;
-using Microsoft.OpenApi;
-using MovieApi.Application.Features.CQRSDesignPattern.Handlers.CategoryHandlers;
-using MovieApi.Application.Features.CQRSDesignPattern.Handlers.MovieHandlers;
-using MovieApi.Application.Features.CQRSDesignPattern.Handlers.UserRegisterHandlers;
-using MovieApi.Application.Features.MediatorDesignPattern.Handlers.TagHandlers;
-using MovieApi.Application.Features.MediatorDesignPattern.Queries.TagQueries;
 using MovieApi.Persistence.Context;
-using MovieApi.Persistence.Identity;
+using MovieApi.WebApi.Extensions;
 
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
 builder.Services.AddDbContext<MovieContext>();
 
-builder.Services.AddScoped<GetCategoryQueryHandler>();
-builder.Services.AddScoped<GetCategoryByIdQueryHandler>();
-builder.Services.AddScoped<CreateCategoryCommandHandler>();
-builder.Services.AddScoped<RemoveCategoryCommandHandler>();
-builder.Services.AddScoped<UpdateCategoryCommandHandler>();
+builder.Services
+    .AddApplicationServices()
+    .AddIdentityServices()
+    .AddMediatorServices()
+    .AddSwaggerGen();
 
-builder.Services.AddScoped<GetMovieQueryHandler>();
-builder.Services.AddScoped<GetMovieByIdQueryHandler>();
-builder.Services.AddScoped<CreateMovieCommandHandler>();
-builder.Services.AddScoped<RemoveMovieCommandHandler>();
-builder.Services.AddScoped<UpdateMovieCommandHandler>();
-
-builder.Services.AddScoped<CreateUserRegisterCommandHandler>();
-builder.Services.AddIdentity<AppUser, IdentityRole>().AddEntityFrameworkStores<MovieContext>();
-
-// builder.Services.AddMediatR(cfg => cfg.RegisterServicesFromAssembly(Assembly.GetExecutingAssembly()));
-// Assembly assembly = typeof(Assembly).Assembly;
-builder.Services.AddMediatR(cfg => cfg.RegisterServicesFromAssembly(Assembly.Load("MovieApi.Application")));
 builder.Services.AddControllers();
 builder.Services.AddEndpointsApiExplorer();
-builder.Services.AddSwaggerGen(c => { c.SwaggerDoc("v1", new OpenApiInfo { Title = "My Api", Version = "v1" }); });
-// builder.Services.AddOpenApi();
 
 var app = builder.Build();
 
-// Configure the HTTP request pipeline.
 if (app.Environment.IsDevelopment())
 {
     // app.MapOpenApi();
     app.UseSwagger();
     app.UseSwaggerUI(c => c.SwaggerEndpoint("/swagger/v1/swagger.json", "My Api V1"));
 }
+
+
+app.Use(async (context, next) =>
+{
+    if (context.Request.Path == ("/"))
+    {
+        context.Response.Redirect("/swagger");
+        return;
+    }
+
+    await next();
+});
 
 app.UseHttpsRedirection();
 app.UseAuthorization();

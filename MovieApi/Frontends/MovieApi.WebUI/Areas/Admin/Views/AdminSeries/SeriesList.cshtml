@@ -1,0 +1,120 @@
+﻿@model List<AdminResultSeriesDto>
+@{
+    ViewBag.Title = "title";
+    Layout = "~/Views/AdminLayout/Index.cshtml";
+    int adet = 0;
+}
+
+
+<link rel="stylesheet" href="/css/AdminMovieList.css">
+
+<div class="card admin-card">
+    <div class="card-body">
+
+        <!-- Header -->
+        <div class="d-flex align-items-center mb-4">
+            <div>
+                <h5 class="mb-1 fw-semibold">Dizi Listesi</h5>
+                <small class="text-muted">Dizi yönetimi ve işlemler</small>
+            </div>
+
+            <div class="ms-auto d-flex align-items-center gap-2">
+                <div class="search-box">
+                    <ion-icon name="search-outline"></ion-icon>
+                    <input type="text" class="form-control" placeholder="Dizi ara...">
+                </div>
+
+                <a href="/Admin/AdminSeries/CreateSeries" class="btn btn-primary btn-soft">
+                    <ion-icon name="add-outline"></ion-icon>
+                    Yeni Dizi
+                </a>
+            </div>
+        </div>
+
+        <!-- Table -->
+        <div class="table-responsive">
+            <table class="table admin-table align-middle">
+                <thead>
+                <tr>
+                    <th>#</th>
+                    <th>Dizi</th>
+                    <th>Rating</th>
+                    <th>Yıl</th>
+                    <th>Durum</th>
+                    <th class="text-end">İşlemler</th>
+                </tr>
+                </thead>
+                <tbody>
+
+                @foreach (var item in Model)
+                {
+                    {
+                        adet++;
+                    }
+                    <tr>
+                        <td class="fw-medium">@adet</td>
+
+                        <td>
+                            <div class="fw-semibold">@item.Title</div>
+                            <small class="text-muted">ID: @item.SeriesId</small>
+                        </td>
+
+                        <td>
+                            <div class="star-rating">
+                                @{
+                                    decimal fullStars = Math.Floor(item.Rating);
+                                    bool halfStar = item.Rating - fullStars >= (decimal)0.5;
+                                }
+
+                                @for (int i = 0; i < fullStars; i++)
+                                {
+                                    <ion-icon name="star"></ion-icon>
+                                }
+
+                                @if (halfStar)
+                                {
+                                    <ion-icon name="star-half"></ion-icon>
+                                }
+
+                                <span class="rating-text">@item.Rating</span>
+                            </div>
+                        </td>
+
+
+                        <td>@item.CreatedYear</td>
+
+                        <td>
+                            @if (item.Status)
+                            {
+                                <span class="status active">Aktif</span>
+                            }
+                            else
+                            {
+                                <span class="status passive">Pasif</span>
+                            }
+                        </td>
+
+                        <td class="text-end">
+                            <div class="action-buttons">
+                                <a href="#" class="btn-icon warning">
+                                    <ion-icon name="eye-outline"></ion-icon>
+                                </a>
+                                <a href="#" class="btn-icon success">
+                                    <ion-icon name="create-outline"></ion-icon>
+                                </a>
+                                <a href="#" class="btn-icon danger">
+                                    <ion-icon name="trash-outline"></ion-icon>
+                                </a>
+                            </div>
+                        </td>
+                    </tr>
+                }
+
+                </tbody>
+            </table>
+        </div>
+
+    </div>
+</div>
+
+
